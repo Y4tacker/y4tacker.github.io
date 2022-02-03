@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Servlet的线程安全问题</title>
+      <link href="/2022/02/03/year/2022/Servlet%E7%9A%84%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98/"/>
+      <url>/2022/02/03/year/2022/Servlet%E7%9A%84%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Servlet的线程安全问题"><a href="#Servlet的线程安全问题" class="headerlink" title="Servlet的线程安全问题"></a>Servlet的线程安全问题</h1><h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><p>首先看看这样的代码，有什么问题</p><p>这里既要求cmd不能包含<code>Calculator</code>又必须要包含<code>Calculator</code>，能做到吗，当然是可以的</p><p><img src="/.io//1.png"></p><h2 id="Servlet的多线程机制"><a href="#Servlet的多线程机制" class="headerlink" title="Servlet的多线程机制"></a>Servlet的多线程机制</h2><p>Servlet实际上是一个单件，当我们第一次请求某个Servlet时，Servlet容器将会根据web.xml配置文件或者是注解实例化这个Servlet类，之后如果又有新的客户端请求该Servlet时，则一般不会再实例化该Servlet类，这说明了什么呢？简单来说，当多个用户一起访问时，得到的其实是同一个Servlet实例，这样的话，他们对实例的成员变量的修改其实会影响到别人，所以在开发的时候如果没有注意这个问题往往会有一些额安全问题，而往往Servlet的线程安全问题主要是由于实例变量使用不当而引起</p><p>因此我们再看上面的代码，很明显我们看到了这个<code>status</code>状态变量是实例变量</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> Tomcat </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
