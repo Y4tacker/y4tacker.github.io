@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>ROME改造计划</title>
+      <link href="/2022/03/07/year/2022/3/ROME%E6%94%B9%E9%80%A0%E8%AE%A1%E5%88%92/"/>
+      <url>/2022/03/07/year/2022/3/ROME%E6%94%B9%E9%80%A0%E8%AE%A1%E5%88%92/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="ROME改造计划"><a href="#ROME改造计划" class="headerlink" title="ROME改造计划"></a>ROME改造计划</h1><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>​    首先非常感谢这次的D^3CTF给我一次学习的机会，两个Java题都挺有意思学到了不同的东西，因为第二个比较简单就不分享了，这里分享一下如何去缩短ROME利用链，全篇没有各种高级技术不涉及ASM的改造，仅仅只是一些Trick和利用链的精简，同时非常感谢我的同学@HolaAs以及我的朋友@风潇在我做题过程当中给我的帮助</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 反序列化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java文件上传大杀器-绕waf(针对commons-fileupload组件)</title>
       <link href="/2022/02/25/year/2022/2/Java%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%A4%A7%E6%9D%80%E5%99%A8-%E7%BB%95waf(%E9%92%88%E5%AF%B9commons-fileupload%E7%BB%84%E4%BB%B6)/"/>
       <url>/2022/02/25/year/2022/2/Java%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%A4%A7%E6%9D%80%E5%99%A8-%E7%BB%95waf(%E9%92%88%E5%AF%B9commons-fileupload%E7%BB%84%E4%BB%B6)/</url>
