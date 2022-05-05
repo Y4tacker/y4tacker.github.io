@@ -4,33 +4,6 @@
   
     
     <entry>
-      <title>On Java读书笔记</title>
-      <link href="/2022/04/26/On-Java%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-      <url>/2022/04/26/On-Java%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="On-Java读书笔记"><a href="#On-Java读书笔记" class="headerlink" title="On Java读书笔记"></a>On Java读书笔记</h2><p>出于效率原因Interger会通过享元模式缓存-128-127之间的对象，多次调用Interget.valueOf生成的是用一个对象，另外通过new Interger生成的对象都是新创建的</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Integer a = <span class="number">127</span>;</span><br><span class="line">Integer b = <span class="number">127</span>;</span><br><span class="line">System.out.println(a==b);</span><br><span class="line">Integer aa = <span class="number">128</span>;</span><br><span class="line">Integer bb = <span class="number">128</span>;</span><br><span class="line">System.out.println(aa==bb);</span><br><span class="line"></span><br><span class="line">Integer aaa = <span class="keyword">new</span> Integer(<span class="string">&quot;127&quot;</span>);</span><br><span class="line">Integer bbb = <span class="keyword">new</span> Integer(<span class="string">&quot;127&quot;</span>);</span><br><span class="line">System.out.println(aaa==bbb);</span><br><span class="line"></span><br><span class="line">Integer aaaa = Integer.valueOf(<span class="string">&quot;127&quot;</span>);</span><br><span class="line">Integer bbbb = Integer.valueOf(<span class="string">&quot;127&quot;</span>);</span><br><span class="line">System.out.println(aaaa==bbbb);</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">true</span></span><br><span class="line"><span class="comment">false</span></span><br><span class="line"><span class="comment">false</span></span><br><span class="line"><span class="comment">true</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><p>代码在这里</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Integer <span class="title">valueOf</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (i &gt;= IntegerCache.low &amp;&amp; i &lt;= IntegerCache.high)</span><br><span class="line">    <span class="keyword">return</span> IntegerCache.cache[i + (-IntegerCache.low)];</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> Integer(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> Java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Java </tag>
-            
-            <tag> 阅读 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2022MRCTF-Java部分</title>
       <link href="/2022/04/24/year/2022/4/2022MRCTF-Java%E9%83%A8%E5%88%86/"/>
       <url>/2022/04/24/year/2022/4/2022MRCTF-Java%E9%83%A8%E5%88%86/</url>
