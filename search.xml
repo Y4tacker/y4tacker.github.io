@@ -13,16 +13,14 @@
       
       <categories>
           
-          <category> Java </category>
+          <category> 渗透测试 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Java </tag>
-            
-            <tag> Fastjson </tag>
+            <tag> 渗透测试 </tag>
             
         </tags>
       
@@ -40,16 +38,14 @@
       
       <categories>
           
-          <category> Java </category>
+          <category> 渗透测试 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Java </tag>
-            
-            <tag> Fastjson </tag>
+            <tag> 渗透测试 </tag>
             
         </tags>
       
@@ -670,9 +666,9 @@
             
             <tag> Java </tag>
             
-            <tag> Jsp </tag>
-            
             <tag> Tomcat </tag>
+            
+            <tag> Jsp </tag>
             
         </tags>
       
