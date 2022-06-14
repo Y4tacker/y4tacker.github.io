@@ -13,14 +13,14 @@
       
       <categories>
           
-          <category> 渗透测试 </category>
+          <category> PTES </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 渗透测试 </tag>
+            <tag> PTES </tag>
             
         </tags>
       
@@ -38,14 +38,14 @@
       
       <categories>
           
-          <category> 渗透测试 </category>
+          <category> PTES </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 渗透测试 </tag>
+            <tag> PTES </tag>
             
         </tags>
       
@@ -666,9 +666,9 @@
             
             <tag> Java </tag>
             
-            <tag> Tomcat </tag>
-            
             <tag> Jsp </tag>
+            
+            <tag> Tomcat </tag>
             
         </tags>
       
