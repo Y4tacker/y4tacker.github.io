@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>浅析Apache Commons Text(CVE-2022-42889)</title>
+      <link href="/2022/10/29/year/2022/10/%E6%B5%85%E6%9E%90Apache-Commons-Text-CVE-2022-42889/"/>
+      <url>/2022/10/29/year/2022/10/%E6%B5%85%E6%9E%90Apache-Commons-Text-CVE-2022-42889/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="浅析Apache-Commons-Text-CVE-2022-42889"><a href="#浅析Apache-Commons-Text-CVE-2022-42889" class="headerlink" title="浅析Apache Commons Text(CVE-2022-42889)"></a>浅析Apache Commons Text(CVE-2022-42889)</h1><p>前段时间我在知识星球上布置了一个小作业，算是赶在一个新的CVE发布之前做了个简单预警了</p><p><img src="/2022/10/29/year/2022/10/%E6%B5%85%E6%9E%90Apache-Commons-Text-CVE-2022-42889/1.png"></p><p>之后呢可以预见，Apache官方确实在几天后发布了一次更新，内容是<a href="https://lists.apache.org/thread/n2bd4vdsgkqh2tm14l1wyc3jyol7s1om%EF%BC%8C%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8ACVE%E7%9A%84%E5%86%85%E5%AE%B9">https://lists.apache.org/thread/n2bd4vdsgkqh2tm14l1wyc3jyol7s1om，版本更新以及CVE的内容</a></p><p>其实总体而言这个的挖掘难度不算高，和前一段时间刚出的Apache Commons Configuration的RCE长的也基本一致，原理也不必多说</p><p>根据官方的demo呢，咋们也可以很容易看出它的基本用法以及漏洞出发点</p><p><img src="/2022/10/29/year/2022/10/%E6%B5%85%E6%9E%90Apache-Commons-Text-CVE-2022-42889/2.png"></p><p>简单的从<code>org.apache.commons.text.lookup.DefaultStringLookup</code>也可以看出，它支持一个script的用法</p><p><img src="/2022/10/29/year/2022/10/%E6%B5%85%E6%9E%90Apache-Commons-Text-CVE-2022-42889/3.png"></p><p>它对应于一个叫<code>org.apache.commons.text.lookup.ScriptStringLookup</code>的类，从它的lookup方法当中我们也可以看到，这就是我们平时RCE所常用到的执行JS实现RCE</p><p><img src="/2022/10/29/year/2022/10/%E6%B5%85%E6%9E%90Apache-Commons-Text-CVE-2022-42889/4.png"></p><p>因此POC也相对简单</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;script:js:java.lang.Runtime.getRuntime().exec(<span class="string">&quot;open -na Calculator&quot;</span>)&#125;</span><br></pre></td></tr></table></figure><p>整个漏洞比较简单，但从漏洞形式以及组件类型来说危害极大，但经过搜索发现网上开源项目中用到的虽然也有，但却看不见向官方demo当中提到的这种用法，当然也不排除一些内部厂商自己使用这样的写法，作为给新手学习了解这个洞还是不错的，因此也有在知识星球发小作业的形式.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> Apache Commons Text </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>浅析Apache Commons Jxpath命令执行分析(CVE-2022-41852)</title>
       <link href="/2022/10/13/year/2022/10/%E6%B5%85%E6%9E%90Apache-Commons-Jxpath%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E5%88%86%E6%9E%90-CVE-2022-41852/"/>
       <url>/2022/10/13/year/2022/10/%E6%B5%85%E6%9E%90Apache-Commons-Jxpath%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E5%88%86%E6%9E%90-CVE-2022-41852/</url>
@@ -473,9 +500,9 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> Fastjson </tag>
+            
+            <tag> CTF </tag>
             
         </tags>
       
