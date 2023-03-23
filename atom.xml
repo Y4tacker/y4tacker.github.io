@@ -62,9 +62,9 @@
     <category term="CTF" scheme="https://y4tacker.github.io/categories/CTF/"/>
     
     
-    <category term="Python" scheme="https://y4tacker.github.io/tags/Python/"/>
-    
     <category term="PHP" scheme="https://y4tacker.github.io/tags/PHP/"/>
+    
+    <category term="Python" scheme="https://y4tacker.github.io/tags/Python/"/>
     
     <category term="Go" scheme="https://y4tacker.github.io/tags/Go/"/>
     
