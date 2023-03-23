@@ -317,9 +317,9 @@
             
             <tag> Java </tag>
             
-            <tag> CTF </tag>
-            
             <tag> Log4j2 </tag>
+            
+            <tag> CTF </tag>
             
         </tags>
       
@@ -689,9 +689,9 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> Fastjson </tag>
+            
+            <tag> CTF </tag>
             
         </tags>
       
