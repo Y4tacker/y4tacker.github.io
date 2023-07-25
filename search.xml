@@ -400,9 +400,9 @@
             
             <tag> Java </tag>
             
-            <tag> CTF </tag>
-            
             <tag> Log4j2 </tag>
+            
+            <tag> CTF </tag>
             
         </tags>
       
@@ -1206,9 +1206,9 @@
             
             <tag> Java </tag>
             
-            <tag> Tomcat </tag>
-            
             <tag> Jsp </tag>
+            
+            <tag> Tomcat </tag>
             
         </tags>
       
