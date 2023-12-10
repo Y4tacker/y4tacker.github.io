@@ -1,239 +1,402 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Y4tacker's Blog</title><meta name="author" content="Y4tacker"><meta name="copyright" content="Y4tacker"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="宁静致远，淡泊明志">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Y4tacker&#39;s Blog">
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta property="og:type" content="website">
+<meta property="og:title" content="宁静致远，淡泊明志">
 <meta property="og:url" content="https://y4tacker.github.io/page/4/index.html">
-<meta property="og:site_name" content="Y4tacker&#39;s Blog">
-<meta property="og:description" content="宁静致远，淡泊明志">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://y4tacker.github.io/images/me.jpeg">
+<meta property="og:site_name" content="宁静致远，淡泊明志">
+<meta property="og:locale" content="en_US">
 <meta property="article:author" content="Y4tacker">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://y4tacker.github.io/images/me.jpeg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://y4tacker.github.io/page/4/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
-  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '天',
-  date_suffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: true
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'Y4tacker\'s Blog',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2023-12-10 15:14:30'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
     
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
+    
+      
         
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
     
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 5.4.1"><link rel="alternate" href="/atom.xml" title="Y4tacker's Blog" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/me.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">55</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">35</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友鏈</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/images/lolboy.jpeg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Y4tacker's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友鏈</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Y4tacker's Blog</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/Stakcery" target="_blank" title="fab fa-github"><i class="GitHub"></i></a><a class="social-icon" href="https://weibo.com/u/6101424682" target="_blank" title="fab fa-weibo"><i class="Weibo"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/06/14/year/2022/6/%E5%AE%9E%E8%AE%AD%E6%89%93%E9%9D%B6%E8%AE%B0%E5%BD%95-%E4%B8%80/" title="实训打靶记录(一)">实训打靶记录(一)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-06-14T10:28:00.000Z" title="发表于 2022-06-14 18:28:00">2022-06-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/PTES/">PTES</a></span></div><div class="content">实训靶机-1实训期间先搞开发再搞了渗透，现在开始渗透阶段了
-信息收集端口扫描发现三个端口，暴露了web服务
-
-用dirsearch进行扫描，发现有vendor目录，里面可能有composer生成的铭感信息
-
-发现配置错误，正好能访问对应文件
-
-获得web目录绝对路径
-PHPmailer版本5.2.16
-
-存在漏洞利用点kali里面发现漏洞利用点
-
-存在wordpress站点首页点击BLOG跳转到wordpress页面
-
-wpscan尝试扫描漏洞发现两个用户steven与michael
-
-尝试爆破ssh密码收集到的两个用户进行利用
-1hydra -L user.txt -P /usr/share/wordlists/rockyou.txt -F -V 192.168.10.131 ssh
-
-成功得到michael的密码Michael
-
-尝试ssh远程登录
-mysql查看mysql是否运行
-获取mysql密码在wordpress目录下wp-config.php获得了root用户的密码
-12345/** MySQL database username */define(&#x27;DB_US ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/05/28/year/2022/5/OpenRasp%E5%88%86%E6%9E%90/" title="OpenRasp分析">OpenRasp分析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-05-28T13:29:30.000Z" title="发表于 2022-05-28 21:29:30">2022-05-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span></div><div class="content">OpenRasp分析[TOC]
-写在前面​    花了点时间学习了下openrasp的核心代码，这里做下简单的分析
-​    相关项目地址：
-​        https://github.com/baidu-security/openrasp-v8
-​        https://github.com/baidu/openrasp
-​    这里我以目前官网最新版的1.3.7来做下分析，这里为了方便简单用springboot写个简单的控制器来进行调试分析即可，当然这里不会去看后端云控部分的代码，笔者只是想理清OpenRasp的逻辑
-​    另外说点p话，顺便在这个过程当中被迫了解了点c++语法真是太妙了
-一些日志说明OpenRasp的日志会通过文件的方式记录在对应文件夹下面，里面日志具体内容就不多解释了点开一眼就看得懂，了解下面几个关于日志目录介绍完全足够了
+    <!-- title -->
+    <title>宁静致远，淡泊明志</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
 
 
-
-文件名
-文件内容
+    <!-- Umami Analytics -->
 
 
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
 
-plugin/plugin-DATE.log
-检测插件的日志，e.g 插件异常、插件调试输出
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 5.4.1"><link rel="alternate" href="/atom.xml" title="宁静致远，淡泊明志" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+    <div class="content index py4 h-card">
+        
+          <header id="header">
+  <a class="u-url u-uid" href="/">
+  
+    
+      <img id="logo" alt class="u-logo" src="/images/logo.png" />
+    
+  
+    <div id="title">
+      <h1 class="p-name">宁静致远，淡泊明志</h1>
+    </div>
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-2x"></i></a>
+      </li>
+      <!--
+     --><li><a href="/">Home</a></li><!--
+   --><!--
+     --><li><a href="/archives/">Writing</a></li><!--
+   --><!--
+     --><li><a href="/tags/">Topics</a></li><!--
+   --><!--
+     --><li><a href="/search/">Search</a></li><!--
+   --><!--
+     --><li><a href="/about/">About</a></li><!--
+   --><!--
+     --><li><a href="/link/">Friend</a></li><!--
+   -->
+    </ul>
+  </div>
+</header>
+
+        
+        <section id="about" class="p-note">
+  
+  
+</section>
+
+<section id="writing">
+  <span class="h1"><a href="/archives/">Writing</a></span>
+  
+  <ul class="post-list">
+    
+    
+      
+    
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2022-06-18T13:33:19.318Z" class="dt-updated" itemprop="dateModified">2022-06-18</time>
+        
+      
+    </div>
 
 
-rasp/rasp-DATE.log
-rasp agent 调试日志
+        <span>
+    
+        <a class="" href="/2022/05/23/year/2022/5/PbootCMS-3-1-2%E5%89%8D%E5%8F%B0%E6%B3%A8%E5%85%A5%E5%88%86%E6%9E%90/">PbootCMS&lt;=3.1.2前台注入分析</a>
+    
 
 
-alarm/alarm ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/05/23/year/2022/5/PbootCMS-3-1-2%E5%89%8D%E5%8F%B0%E6%B3%A8%E5%85%A5%E5%88%86%E6%9E%90/" title="PbootCMS&lt;=3.1.2前台注入分析">PbootCMS&lt;=3.1.2前台注入分析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-05-23T11:31:15.000Z" title="发表于 2022-05-23 19:31:15">2022-05-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/PHP/">PHP</a></span></div><div class="content">
-  a9fe59992c8538b9c3d57a786c064d2763acbe866ccac82559002e26cf5bc6eaafc8c35c01d9b25dafa324cd57a364563324cdf9caab15597fa8f0aa5b1050a5ba0645c2864ea8afe840e3476b70c1b30e4fcb6ab05ffbdb452ada541a699cee10264c0ab8e07c2f626b68fb2e43c33dd99e50e7f5f260e717102ed384c7cf331d2f412f922b405f774dad1b4fd93894036f85c54ec025e54ded88fa36e1612984b964a06c8b4ee30e1b4d4c410bb75046ba13749a3eaeb324242b663576514f9c088ba8c71198f529d0db8c64f020110e179d94787f9c6890699b6764f297a8f3674aa17ec7e46a0299b7bfaca9abcf2465871c5b7d79e2d ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/05/16/year/2022/5/JspWebShell%E6%96%B0%E5%A7%BF%E5%8A%BF%E8%A7%A3%E8%AF%BB/" title="JspWebShell新姿势解读">JspWebShell新姿势解读</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-05-16T15:23:07.000Z" title="发表于 2022-05-16 23:23:07">2022-05-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span></div><div class="content">JspWebShell新姿势解读写在前面​    刚刚无意间发现我yzddmr6发了篇新文章，里面提到了一个jspwebshell的新姿势，但是没有具体分析，那么这里我就接着来分析一波
-首先代码长这样
-12345&lt;%    Runtime.getRuntime().    //\u000d\uabcdexec(&quot;open -na Calculator&quot;);%&gt;
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2022-06-14T10:44:28.539Z" class="dt-updated" itemprop="dateModified">2022-06-14</time>
+        
+      
+    </div>
 
-正文如果按照传统Java的javac的方式编译这样一定是会出错的，这里不贴图自己试试，而jsp不同于普通的java程序，jsp是有自己的对类编译时的实现机制,其编译类的时候最终是在org.apache.jasper.compiler.JDTCompiler#generateClass生成我们的class文件(省略中途的很多步骤直捣黄龙，不然讲着也费劲)
-这是调用栈，有兴趣可以深入分析
-12345678910111213141516171819202122232425262728293031323334353637383940414243getNextToken0:1482, Scanner (o ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/05/09/year/2022/5/GadgetInspector%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" title="GadgetInspector源码分析">GadgetInspector源码分析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-05-09T01:56:31.000Z" title="发表于 2022-05-09 09:56:31">2022-05-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span></div><div class="content">GadgetInspector源码分析前置废话我不想搞介绍，就这样吧，写这个主要是网上的对我很晦涩，很多别人觉得简单的我不会，包括一些汇编指令等，当然本篇也是站在很多前辈的肩膀上进行学习，属实是少花了很多功夫
-在分析gadgetinspector源码的时候，大概会对各个核心类讲解，并简单分析ASM部分，btw本篇基于jdk8进行分析
-当然既然是学习，那么我们肯定是需要跟踪代码的，而GI这款工具属实头疼，本身不仅引入了jdk的一些依赖如rt.jar，在调试的过程当中也出现了gadgetinspector当中的类，属实不适合学习时使用，为了解决这个问题，我在gadgetinspector.ClassResourceEnumerator#getAllClasses当中将源码修改如此，这样我便能自行写代码逻辑，并展开学习，我个人认为化繁为简也是一个很重要的过程，如下我剔除了jdk原本的类，并且要求全类名包含特定字符，因此解决了这个问题，当然在具体使用的时候还是要替换回来
-123456789101112public Collection&lt;ClassResource&gt; getAllCl ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/05/05/year/2022/5/%E5%86%99%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%842021%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" title="写给自己的2022年终总结">写给自己的2022年终总结</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-05-05T04:03:45.000Z" title="发表于 2022-05-05 12:03:45">2022-05-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%80%BB%E7%BB%93/">总结</a></span></div><div class="content">写给自己的2021年终总结写在前面​    想了想还是给自己写一个2021年的年终总结，回顾下过去一年所做的事情，复盘下自己的不足、待改进项。也便于未来时不时回来看看过去的我都在想一些什么。本来打算2022年年初写一篇的，可惜太懒了加上当时也忙着打比赛还有偶尔准备下实习面试的准备就一直没写，拖到了现在。疫情期间，有舍有得，且行且珍惜。主要是技术相关的吧，一些生活方面的不是很想在网上公开呢。
-回忆2021年​    这段时间还是比较迷茫，不知道该干什么，特别是刚刚一月的时候，特别是想着每次打比赛都没有输出很难受(从20年九月进战队那时还是刚刚入门没多久，前两个月比赛题最多做出来了一道题很难受自闭了一段时间，再加上疫情我一个人在学校，最自闭的时候好几天都开心不起来)，也记不清了
-​    也恰好在一月，成为我一个重要的人生转折点，在一月和我的朋友们一起参加了几个小比赛，有CTFSHOW的DJBCTF，这也是我第一个AK的比赛，这次比赛后我也重拾了很多信心(真的刷题学习半年了，很难受这一次比赛算是对我最大的安慰了)，在这个月也是我和我的小可爱相识的日子，还记得和你分享我比赛的那天，被小可爱表 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/04/24/year/2022/4/2022MRCTF-Java%E9%83%A8%E5%88%86/" title="2022MRCTF-Java部分">2022MRCTF-Java部分</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-04-24T04:41:06.000Z" title="发表于 2022-04-24 12:41:06">2022-04-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span></div><div class="content">2022MRCTF-Java部分总结总的来说是一次非常不错的比赛，这里也会简单列出考点方便查阅学习，不难有点引导性质
-Ps：此次比赛都是不出网，所以都需要内存马，内存马部分不做讲解很简单百度搜搜
-下面这两题挺不错的也学到了东西，题目做了备份，核心代码(exp)也放到了git仓库备份，本篇只是思路帖子
-https://github.com/Y4tacker/CTFBackup/tree/main/2022/2022MRCTF
-Springcoffee–Kryo反序列化、绕Rasp
-EzJava–绕Serialkiller黑名单中cc关键组件
-下面这两题没啥参考价值，不过让我搞了下实战也还不错
-Java_mem_shell_Filter–log4j2打jndi
-Java_mem_shell_Basic—tomcat弱口令
-Springcoffee – Kryo反序列化、绕Raspok，这东西也是从来没学过，又是从头开始，这里记录了当时是如何思考的分析思考过程
-思路分析首先看看整体目录结构
 
-这里挑几个重要的来讲一下CoffeeController
-order路由反序列化
-1234567@R ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/04/18/year/2022/4/2022-CTF-Web/" title="2022*CTF-Web">2022*CTF-Web</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-04-18T03:00:13.000Z" title="发表于 2022-04-18 11:00:13">2022-04-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/CTF/">CTF</a></span></div><div class="content">2022*CTF-Web写在前面XCTF国际赛系列一直不错，周末参与了下这次比赛，虽然没有Java但总体还是蛮有意思
-这里没按题目顺序写，只是写了在我心中从上到下的排序，对有源码的题目做了备份
-oh-my-lotto
-​    链接: https://pan.baidu.com/s/1G53aYqIIbHGlowdWFhkKqw 提取码: oism
-oh-my-lotto心目中比较有趣的一题呗，重生之我是赌神
-这是一个非预期，因为后面又上了个revenge，简单分析下题目，先看看docker内容，可以知道大概的结构
-12345678910111213141516171819version: &quot;3&quot; services:  lotto:    build:      context: lotto/      dockerfile: Dockerfile    container_name: &quot;lotto&quot;  app:      build:      context: app/      dockerfile: Dockerfile    links ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/04/14/year/2022/4/%E6%B5%85%E8%B0%88Shiro550%E5%8F%97Tomcat-Header%E9%95%BF%E5%BA%A6%E9%99%90%E5%88%B6%E5%BD%B1%E5%93%8D%E7%AA%81%E7%A0%B4/" title="浅谈Shiro550受Tomcat Header长度限制影响突破">浅谈Shiro550受Tomcat Header长度限制影响突破</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-04-14T07:00:55.000Z" title="发表于 2022-04-14 15:00:55">2022-04-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span></div><div class="content">浅谈Shiro550受Tomcat Header长度限制影响突破0x00 写在前面写个shiro相关的东西，还是秉着写出来才能学的更多的理念，当然个人还是不太喜欢贴上整串代码，只是分享思路心得，在很早以前我学习这个只是想弹出计算器，但是后面自己还是更喜欢折腾实战方面的一些构思(虽然没有过)，在实战中我们更希望得到一个有回显的，而不是只是执行一个命令，关于回显最通用的就是去遍历线程对象中获取request，但是后面发现Tomcat居然有Header长度的限制，接下来就是解决问题
-0x01 一些传统思路思路一：修改maxHeaderSize(不太喜欢)首先是在网上参考学习到了Litch1写的文章基于全局储存的新思路 | Tomcat的一种通用回显方法研究
-里面提到了去修改org.apache.coyote.http11.AbstractHttp11Protocol中的maxHeaderSize的值，里面通过多个线程发送payload来确保request的inputbuffer会复用，个人觉得不太稳定，另一方面就算构造出来了其实也很长了，在我心中不是最优解
-思路二：分离payload+动态类 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/04/14/year/2022/4/Enjoy%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%88%86%E6%9E%90/" title="Enjoy模板引擎分析">Enjoy模板引擎分析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-04-14T04:15:23.000Z" title="发表于 2022-04-14 12:15:23">2022-04-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span></div><div class="content">Enjoy模板引擎分析前置首先有关Enjoy模板引擎的一些描述可以看这里：https://jfinal.com/doc/6-1
-文档中值得关注的点属性访问触发get方法在官方文档里面我们可以看到很多有趣的东西(当然我会更关注于一些相关的)，比如属性访问的这一条描述，可以让我们去触发对象的get方法(前提是public修饰)
-12345由于模板引擎的属性取值表达式极为常用，所以对其在用户体验上进行了符合直觉的扩展，field 表达式取值优先次序，以 user.name 为例：如果 user.getName() 存在，则优先调用如果 user 具有 public 修饰过的name 属性，则取 user.name 属性值（注意：jfinal 4.0 之前这条规则的优先级最低）
+        <span>
+    
+        <a class="" href="/2022/06/14/year/2022/6/%E5%AE%9E%E8%AE%AD%E6%89%93%E9%9D%B6%E8%AE%B0%E5%BD%95-%E4%B8%80/">实训打靶记录(一)</a>
+    
 
-方法调用关于方法调用也有一些描述，说可以直接调用对象上的任何public方法，使用规则与java中调用方式保持一致，当然也不是所有方法都能调用，在源码的调试过程当中发现有一些方法在黑名单当中
-1234567891011121314151617getClasswaitnotifyAllgetClassLoaderinv ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#content-inner">5</a><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/5/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/me.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Y4tacker</div><div class="author-info__description">宁静致远，淡泊明志</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">55</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">35</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Y4tacker"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Stakcery" target="_blank" title="fab fa-github"><i class="GitHub"></i></a><a class="social-icon" href="https://weibo.com/u/6101424682" target="_blank" title="fab fa-weibo"><i class="Weibo"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">这是一个随意创作的地方，主要记录未来关于学习研究的点点滴滴，但也可能又一些其他教学文，当然如果有些文章带day性质就加密个人看了(放公网也是方便自己查阅，不要问我密码不会说的)</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/09/year/2023/12/Apache-Struts2-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%88%86%E6%9E%90-S2-066/" title="Apache Struts2 文件上传分析(S2-066)">Apache Struts2 文件上传分析(S2-066)</a><time datetime="2023-12-09T10:55:03.000Z" title="发表于 2023-12-09 18:55:03">2023-12-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/08/year/2023/12/%E6%9F%90%E6%9F%90%E9%80%9A%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/" title="某某通漏洞分析">某某通漏洞分析</a><time datetime="2023-12-08T12:44:51.000Z" title="发表于 2023-12-08 20:44:51">2023-12-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/30/year/2023/11/%E6%9F%90%E7%B3%BB%E7%BB%9F%E6%9C%80%E6%96%B0%E5%89%8D%E5%8F%B0RCE%E5%88%86%E6%9E%90/Apache-ActiveMQ-Jolokia%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E4%B8%8D%E4%BE%9D%E8%B5%96JDK%E6%89%93%E6%B3%95/" title="Apache ActiveMQ Jolokia远程代码执行不依赖JDK打法">Apache ActiveMQ Jolokia远程代码执行不依赖JDK打法</a><time datetime="2023-11-30T12:20:15.000Z" title="发表于 2023-11-30 20:20:15">2023-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/29/year/2023/11/Apache-ActiveMQ-Jolokia%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C-CVE-2022-41678-%E7%AE%80%E6%9E%90%E5%8F%8A%E7%BB%95Waf%E6%8A%80%E6%B3%95/" title="Apache ActiveMQ Jolokia远程代码执行(CVE-2022-41678)简析及绕Waf技法">Apache ActiveMQ Jolokia远程代码执行(CVE-2022-41678)简析及绕Waf技法</a><time datetime="2023-11-29T12:29:34.000Z" title="发表于 2023-11-29 20:29:34">2023-11-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/26/year/2023/11/%E6%9F%90%E7%B3%BB%E7%BB%9F%E6%9C%80%E6%96%B0%E5%89%8D%E5%8F%B0%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87%E5%88%86%E6%9E%90/" title="某系统最新前台权限绕过分析">某系统最新前台权限绕过分析</a><time datetime="2023-11-26T11:39:33.000Z" title="发表于 2023-11-26 19:39:33">2023-11-26</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
-            <i class="fas fa-folder-open"></i>
-            <span>分类</span>
-            
-            </div>
-            <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/CTF/"><span class="card-category-list-name">CTF</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Java/"><span class="card-category-list-name">Java</span><span class="card-category-list-count">40</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/PHP/"><span class="card-category-list-name">PHP</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/PTES/"><span class="card-category-list-name">PTES</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/php/"><span class="card-category-list-name">php</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%80%BB%E7%BB%93/"><span class="card-category-list-name">总结</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="card-category-list-name">随笔</span><span class="card-category-list-count">3</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Apache-Commons-Jxpath/" style="font-size: 1.1em; color: #999">Apache Commons Jxpath</a> <a href="/tags/Apache-Commons-Text/" style="font-size: 1.1em; color: #999">Apache Commons Text</a> <a href="/tags/C3P0/" style="font-size: 1.1em; color: #999">C3P0</a> <a href="/tags/CTF/" style="font-size: 1.23em; color: #999ea6">CTF</a> <a href="/tags/Enjoy%E6%A8%A1%E6%9D%BF/" style="font-size: 1.1em; color: #999">Enjoy模板</a> <a href="/tags/Fastjson/" style="font-size: 1.3em; color: #99a1ac">Fastjson</a> <a href="/tags/Go/" style="font-size: 1.1em; color: #999">Go</a> <a href="/tags/Java/" style="font-size: 1.5em; color: #99a9bf">Java</a> <a href="/tags/Jsp/" style="font-size: 1.17em; color: #999c9f">Jsp</a> <a href="/tags/Kryo/" style="font-size: 1.1em; color: #999">Kryo</a> <a href="/tags/Log4j2/" style="font-size: 1.1em; color: #999">Log4j2</a> <a href="/tags/Nodejs/" style="font-size: 1.17em; color: #999c9f">Nodejs</a> <a href="/tags/PHP/" style="font-size: 1.3em; color: #99a1ac">PHP</a> <a href="/tags/PTES/" style="font-size: 1.17em; color: #999c9f">PTES</a> <a href="/tags/Python/" style="font-size: 1.23em; color: #999ea6">Python</a> <a href="/tags/Rasp/" style="font-size: 1.1em; color: #999">Rasp</a> <a href="/tags/RuoYi/" style="font-size: 1.1em; color: #999">RuoYi</a> <a href="/tags/Serialkiller/" style="font-size: 1.1em; color: #999">Serialkiller</a> <a href="/tags/Shiro/" style="font-size: 1.1em; color: #999">Shiro</a> <a href="/tags/Smartbi/" style="font-size: 1.17em; color: #999c9f">Smartbi</a> <a href="/tags/SnakeYAML/" style="font-size: 1.23em; color: #999ea6">SnakeYAML</a> <a href="/tags/SpEL/" style="font-size: 1.1em; color: #999">SpEL</a> <a href="/tags/Struts2/" style="font-size: 1.1em; color: #999">Struts2</a> <a href="/tags/TemplatesImpl/" style="font-size: 1.1em; color: #999">TemplatesImpl</a> <a href="/tags/Tomcat/" style="font-size: 1.17em; color: #999c9f">Tomcat</a> <a href="/tags/Waf/" style="font-size: 1.37em; color: #99a4b2">Waf</a> <a href="/tags/Webshell/" style="font-size: 1.17em; color: #999c9f">Webshell</a> <a href="/tags/XStream/" style="font-size: 1.1em; color: #999">XStream</a> <a href="/tags/pearcmd/" style="font-size: 1.1em; color: #999">pearcmd</a> <a href="/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" style="font-size: 1.43em; color: #99a6b9">代码审计</a> <a href="/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" style="font-size: 1.17em; color: #999c9f">反序列化</a> <a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 1.1em; color: #999">总结</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 1.1em; color: #999">自动化</a> <a href="/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" style="font-size: 1.1em; color: #999">踩坑记录</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 1.23em; color: #999ea6">随笔</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
-    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">一月 2023</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">55</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2022-02-01T09:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">93.7k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-12-10T07:14:30.416Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By Y4tacker</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://y4tacker.github.io/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">簡</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2022-06-01T13:39:18.366Z" class="dt-updated" itemprop="dateModified">2022-06-01</time>
+        
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2022/05/28/year/2022/5/OpenRasp%E5%88%86%E6%9E%90/">OpenRasp分析</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2022-05-17T01:44:06.506Z" class="dt-updated" itemprop="dateModified">2022-05-17</time>
+        
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2022/05/16/year/2022/5/JspWebShell%E6%96%B0%E5%A7%BF%E5%8A%BF%E8%A7%A3%E8%AF%BB/">JspWebShell新姿势解读</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2022-05-15T13:21:17.361Z" class="dt-updated" itemprop="dateModified">2022-05-15</time>
+        
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2022/05/09/year/2022/5/GadgetInspector%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">GadgetInspector源码分析</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2022-05-05T05:46:21.419Z" class="dt-updated" itemprop="dateModified">2022-05-05</time>
+        
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2022/05/05/year/2022/5/%E5%86%99%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%842021%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">写给自己的2022年终总结</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2022-04-25T14:46:14.522Z" class="dt-updated" itemprop="dateModified">2022-04-25</time>
+        
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2022/04/24/year/2022/4/2022MRCTF-Java%E9%83%A8%E5%88%86/">2022MRCTF-Java部分</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2022-04-18T08:41:51.397Z" class="dt-updated" itemprop="dateModified">2022-04-18</time>
+        
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2022/04/18/year/2022/4/2022-CTF-Web/">2022*CTF-Web</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2022-04-14T12:46:51.133Z" class="dt-updated" itemprop="dateModified">2022-04-14</time>
+        
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2022/04/14/year/2022/4/Enjoy%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%88%86%E6%9E%90/">Enjoy模板引擎分析</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2022-04-14T07:06:21.382Z" class="dt-updated" itemprop="dateModified">2022-04-14</time>
+        
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2022/04/14/year/2022/4/%E6%B5%85%E8%B0%88Shiro550%E5%8F%97Tomcat-Header%E9%95%BF%E5%BA%A6%E9%99%90%E5%88%B6%E5%BD%B1%E5%93%8D%E7%AA%81%E7%A0%B4/">浅谈Shiro550受Tomcat Header长度限制影响突破</a>
+    
+
+
+</span>
+      </li>
+    
+  </ul>
+  
+    
+    <div class="pagination">
+        
+            <a href="/page/3/"><i class="fa-solid fa-angle-left"></i></a>
+        
+        <span class="page-number">Page 4 of 6</span>
+        
+            <a href="/page/5/"><i class="fa-solid fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+
+  
+</section>
+
+
+<section id="projects">
+  <span class="h1"><a target="_blank" rel="noopener" href="http://github.com/probberechts">Projects</a></span>
+  <ul class="project-list">
+    
+      <li class="project-item">
+        <a target="_blank" rel="noopener" href="https://github.com/Y4tacker/JavaSec">JavaSec</a>: <p>记录一些学习Java的心得</p>
+
+      </li>
+    
+  </ul>
+</section>
+
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2023
+    Y4tacker
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Topics</a></li><!--
+     --><!--
+       --><li><a href="/search/">Search</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/link/">Friend</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
