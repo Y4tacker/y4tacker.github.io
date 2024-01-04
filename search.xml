@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>如何判断在IDEA中程序正在运行或正在Debug</title>
+      <link href="/2024/01/04/year/2024/1/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%9C%A8IDEA%E4%B8%AD%E7%A8%8B%E5%BA%8F%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%E6%88%96%E6%AD%A3%E5%9C%A8Debug/"/>
+      <url>/2024/01/04/year/2024/1/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%9C%A8IDEA%E4%B8%AD%E7%A8%8B%E5%BA%8F%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%E6%88%96%E6%AD%A3%E5%9C%A8Debug/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="如何判断在IDEA中程序正在运行或正在Debug"><a href="#如何判断在IDEA中程序正在运行或正在Debug" class="headerlink" title="如何判断在IDEA中程序正在运行或正在Debug"></a>如何判断在IDEA中程序正在运行或正在Debug</h1><p>给大家分享一个有趣又无用的东西，如何判断在IDEA中程序正在运行或正在Debug</p><p>在这个之前我们首先需要了解一个类<code>ManagementFactory</code> ，它是 Java 标准库中的一个类，它提供了访问运行时系统管理接口的工厂方法。通过 <code>ManagementFactory</code> 类，可以获取包括操作系统、内存、线程、类加载器等在内的多种系统管理信息。</p><p>一些常用的用途包括：</p><ol><li>获取运行时信息：可以通过 <code>ManagementFactory.getRuntimeMXBean()</code> 方法获取与 Java 虚拟机的运行时信息相关的 bean，包括虚拟机的名称、虚拟机的启动时间、虚拟机的系统属性等。</li><li>获取操作系统信息：可以使用 <code>ManagementFactory.getOperatingSystemMXBean()</code> 方法获取与操作系统相关的 bean，包括 CPU 数量、系统负载等信息。</li><li>获取内存信息：可以使用 <code>ManagementFactory.getMemoryMXBean()</code> 方法获取与内存相关的 bean，包括堆内存使用情况、非堆内存使用情况等。</li><li>获取线程信息：可以使用 <code>ManagementFactory.getThreadMXBean()</code> 方法获取与线程相关的 bean，包括线程数量、线程状态等。</li></ol><p>因此我们通过 <code>ManagementFactory.getRuntimeMXBean().getInputArguments()</code> 即可获得所有 JVM 参数</p><p>通过下面这样简单的代码我们可以</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; inputArguments = ManagementFactory.getRuntimeMXBean().getInputArguments();</span><br><span class="line">  <span class="keyword">for</span> (String arg : inputArguments) &#123;</span><br><span class="line">      System.out.println(arg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>以我的电脑为例，普通运行时</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-javaagent:/Applications/myapp/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=<span class="number">51347</span>:/Applications/myapp/IntelliJ IDEA.app/Contents/bin</span><br><span class="line">-Dfile.encoding=UTF-<span class="number">8</span></span><br></pre></td></tr></table></figure><p>debug时</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-agentlib:jdwp=transport=dt_socket,address=<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">51362</span>,suspend=y,server=n</span><br><span class="line">-javaagent:/Users/y4tacker/Library/Caches/JetBrains/IntelliJIdea2021<span class="number">.3</span>/captureAgent/debugger-agent.jar</span><br><span class="line">-Dfile.encoding=UTF-<span class="number">8</span></span><br></pre></td></tr></table></figure><p>我们不难发现在运行时与debug时，注入了不同的Agent对象，因此我们便可以利用这个差异性去判断程序是在运行还是在debug，当然为了减小检测的动静如果我们不使用<code>ManagementFactory</code>怎么办？</p><p>解决方法也很简单，既然注入了不同的Agent那么就必然在加载时就有着不同的类</p><p>因此通过下面这样简单的几行代码，就能解决这个问题啦</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    Thread.currentThread().getContextClassLoader().loadClass(<span class="string">&quot;com.intellij.rt.debugger.agent.CaptureAgent&quot;</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;我在debug呢&quot;</span>);</span><br><span class="line">&#125;<span class="keyword">catch</span> (java.lang.ClassNotFoundException e)&#123;</span><br><span class="line">    Thread.currentThread().getContextClassLoader().loadClass(<span class="string">&quot;com.intellij.rt.ant.execution.AntMain2&quot;</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;我没在debug呢&quot;</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>下面来看看效果，直接运行</p><p><img src="/2024/01/04/year/2024/1/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%9C%A8IDEA%E4%B8%AD%E7%A8%8B%E5%BA%8F%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%E6%88%96%E6%AD%A3%E5%9C%A8Debug/image-20240104233416198.png" alt="image-20240104233416198">debug运行<img src="/2024/01/04/year/2024/1/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%9C%A8IDEA%E4%B8%AD%E7%A8%8B%E5%BA%8F%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%E6%88%96%E6%AD%A3%E5%9C%A8Debug/image-20240104233434028.png" alt="image-20240104233434028"></p><p>简单但是有趣，接下来我们便可以结合之前提到的<a href="https://y4tacker.github.io/2023/12/22/year/2023/12/Hacking-FernFlower/">混淆方案</a>，继续给IDEA做更定向的投毒，同时我们也可以通过这样的方式阻止别人在IDEA中运行或者调试我们的代码</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> Trick </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>又又又是一个属性覆盖带来的漏洞</title>
       <link href="/2023/12/28/year/2023/12/%E5%8F%88%E5%8F%88%E5%8F%88%E6%98%AF%E4%B8%80%E4%B8%AA%E5%B1%9E%E6%80%A7%E8%A6%86%E7%9B%96%E5%B8%A6%E6%9D%A5%E7%9A%84%E6%BC%8F%E6%B4%9E/"/>
       <url>/2023/12/28/year/2023/12/%E5%8F%88%E5%8F%88%E5%8F%88%E6%98%AF%E4%B8%80%E4%B8%AA%E5%B1%9E%E6%80%A7%E8%A6%86%E7%9B%96%E5%B8%A6%E6%9D%A5%E7%9A%84%E6%BC%8F%E6%B4%9E/</url>
@@ -535,9 +562,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> PHP </tag>
+            
+            <tag> Python </tag>
             
             <tag> Go </tag>
             
@@ -589,9 +616,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Java </tag>
+            
+            <tag> Python </tag>
             
             <tag> Nodejs </tag>
             
@@ -618,9 +645,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Java </tag>
+            
+            <tag> Python </tag>
             
             <tag> Nodejs </tag>
             
@@ -803,9 +830,9 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> Java </tag>
+            
+            <tag> CTF </tag>
             
             <tag> Log4j2 </tag>
             
@@ -1177,9 +1204,9 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> Fastjson </tag>
+            
+            <tag> CTF </tag>
             
         </tags>
       
@@ -1652,28 +1679,6 @@
     
     
     <entry>
-      <title>文章归档</title>
-      <link href="/archive.html"/>
-      <url>/archive.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>links</title>
-      <link href="/friend.html"/>
-      <url>/friend.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul><li><a href="https://nexmoe.com/" title="折影轻梦"><img src="https://avatar.mixcm.com/github/nexmoe" alt="折影轻梦"></a></li></ul>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title></title>
       <link href="/google4e6948178b5b9b74.html"/>
       <url>/google4e6948178b5b9b74.html</url>
@@ -1690,6 +1695,17 @@
       <url>/about/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="👋Hi，I’am-Y4tacker"><a href="#👋Hi，I’am-Y4tacker" class="headerlink" title="👋Hi，I’am Y4tacker"></a>👋Hi，I’am Y4tacker</h3><blockquote><p>宁静致远，淡泊明志</p></blockquote><ul><li>🔭 CTFer: @0x401 Team(The third captain)/@R3kapig(Member)</li><li>⭐️ Github: <a href="https://github.com/Y4tacker">https://github.com/Y4tacker</a></li><li>🍔 Blog: <a href="http://y4tacker.github.io/">http://y4tacker.github.io/</a></li><li>💡 Alibaba Coud</li></ul>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>links</title>
+      <link href="/friend.html"/>
+      <url>/friend.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul><li><a href="https://nexmoe.com/" title="折影轻梦"><img src="https://avatar.mixcm.com/github/nexmoe" alt="折影轻梦"></a></li></ul>]]></content>
       
     </entry>
     
@@ -1718,11 +1734,11 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><ul><li><a href="https://4ra1n.github.io/">4ra1n</a>: 许少！！！</li><li><a href="https://websecuritys.cn/">远海</a> : 凡是过往,皆为序章.</li><li><a href="https://rayzz.cc/">rayzz</a>: just do it.</li><li><a href="https://ek1ng.com/">ek1ng</a>:  YESTERDAY YOU SAID TOMORROW.</li><li><a href="https://www.snakin.top/">Snakinya</a>: 苍山负雪，明烛天南.</li><li><a href="https://blog.zgsec.cn/">曾哥</a>: 弱小和无知不是生存的障碍，傲慢才是！</li><li><a href="https://miaotony.xyz/">MiaoTony</a>: 仰望星空，脚踏实地，未来可期.</li><li><a href="https://www.r3gr3t.com/">R3gr3t</a>: 战队Web师傅&amp;学弟.</li></ul><h1 id="Binary"><a href="#Binary" class="headerlink" title="Binary"></a>Binary</h1><ul><li><a href="https://minhal.me/">Minhal</a>: 战队逆向师傅&amp;学长</li><li><a href="https://crazymanarmy.github.io/">CrazyMan</a>: 空白！！！</li><li><a href="https://apeng.re/">apeng</a>: Reverse Everything</li><li><a href="https://xia0ji233.pro/">xia0ji233</a>: 老当益壮，宁移白首之心？穷且益坚，不坠青云之志.</li></ul>]]></content>
       
     </entry>
     
@@ -1740,11 +1756,22 @@
     
     
     <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><ul><li><a href="https://4ra1n.github.io/">4ra1n</a>: 许少！！！</li><li><a href="https://websecuritys.cn/">远海</a> : 凡是过往,皆为序章.</li><li><a href="https://rayzz.cc/">rayzz</a>: just do it.</li><li><a href="https://ek1ng.com/">ek1ng</a>:  YESTERDAY YOU SAID TOMORROW.</li><li><a href="https://www.snakin.top/">Snakinya</a>: 苍山负雪，明烛天南.</li><li><a href="https://blog.zgsec.cn/">曾哥</a>: 弱小和无知不是生存的障碍，傲慢才是！</li><li><a href="https://miaotony.xyz/">MiaoTony</a>: 仰望星空，脚踏实地，未来可期.</li><li><a href="https://www.r3gr3t.com/">R3gr3t</a>: 战队Web师傅&amp;学弟.</li></ul><h1 id="Binary"><a href="#Binary" class="headerlink" title="Binary"></a>Binary</h1><ul><li><a href="https://minhal.me/">Minhal</a>: 战队逆向师傅&amp;学长</li><li><a href="https://crazymanarmy.github.io/">CrazyMan</a>: 空白！！！</li><li><a href="https://apeng.re/">apeng</a>: Reverse Everything</li><li><a href="https://xia0ji233.pro/">xia0ji233</a>: 老当益壮，宁移白首之心？穷且益坚，不坠青云之志.</li></ul>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>文章归档</title>
+      <link href="/archive.html"/>
+      <url>/archive.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
     </entry>
     
