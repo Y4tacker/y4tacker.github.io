@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://y4tacker.github.io/2025/11/10/year/2025/11/No-FTP-%E9%AB%98%E7%89%88%E6%9C%ACJDK%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87XXE-OOB%E8%AF%BB%E5%8F%96%E5%A4%9A%E8%A1%8C%E6%96%87%E4%BB%B6/</loc>
+    
+    <lastmod>2025-11-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://y4tacker.github.io/2025/09/02/year/2025/09/%E9%83%A8%E5%88%86%E5%8D%9A%E5%AE%A2%E5%AF%86%E7%A0%81%E5%88%A0%E9%99%A4%E4%B8%B4%E6%97%B6%E9%80%9A%E7%9F%A5/</loc>
     
     <lastmod>2025-09-02</lastmod>
@@ -362,7 +371,7 @@
   </url>
   
   <url>
-    <loc>https://y4tacker.github.io/google4e6948178b5b9b74.html</loc>
+    <loc>https://y4tacker.github.io/friend.html</loc>
     
     <lastmod>2024-08-04</lastmod>
     
@@ -371,7 +380,7 @@
   </url>
   
   <url>
-    <loc>https://y4tacker.github.io/friend.html</loc>
+    <loc>https://y4tacker.github.io/google4e6948178b5b9b74.html</loc>
     
     <lastmod>2024-08-04</lastmod>
     
@@ -884,7 +893,7 @@
   </url>
   
   <url>
-    <loc>https://y4tacker.github.io/2022/02/25/year/2022/2/Java%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%A4%A7%E6%9D%80%E5%99%A8-%E7%BB%95waf(%E9%92%88%E5%AF%B9commons-fileupload%E7%BB%84%E4%BB%B6)/</loc>
+    <loc>https://y4tacker.github.io/2022/02/05/year/2022/2/Java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E8%84%8F%E6%95%B0%E6%8D%AE%E7%BB%95WAF/</loc>
     
     <lastmod>2024-08-04</lastmod>
     
@@ -893,7 +902,7 @@
   </url>
   
   <url>
-    <loc>https://y4tacker.github.io/2022/02/05/year/2022/2/Java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E8%84%8F%E6%95%B0%E6%8D%AE%E7%BB%95WAF/</loc>
+    <loc>https://y4tacker.github.io/2022/02/25/year/2022/2/Java%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%A4%A7%E6%9D%80%E5%99%A8-%E7%BB%95waf(%E9%92%88%E5%AF%B9commons-fileupload%E7%BB%84%E4%BB%B6)/</loc>
     
     <lastmod>2024-08-04</lastmod>
     
@@ -1057,477 +1066,477 @@
 
   <url>
     <loc>https://y4tacker.github.io/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://y4tacker.github.io/tags/Python/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/PHP/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/Go/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <loc>https://y4tacker.github.io/tags/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/tags/Java/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/Nodejs/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/CTF/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/Struts2/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/Apache/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/CrushFTP/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/Apusic/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/IDEA/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/FernFlower/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/Smartbi/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/TemplatesImpl/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/Fastjson/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/Apache-Commons-Text/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/tags/Apache-Commons-Jxpath/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://y4tacker.github.io/tags/Waf/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/SnakeYAML/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/XStream/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/C3P0/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/Tomcat/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <loc>https://y4tacker.github.io/tags/Apache-Commons-Text/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/tags/Webshell/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/Jsp/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/SpEL/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/Rasp/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/Enjoy%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/RuoYi/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/Shiro/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/pearcmd/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/PTES/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/Kryo/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/Serialkiller/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/Fastjson/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/CTF/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/Kryo/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/Serialkiller/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/Enjoy%E6%A8%A1%E6%9D%BF/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/RuoYi/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/Shiro/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/PHP/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/pearcmd/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/PTES/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/Waf/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/Tomcat/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/SnakeYAML/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/XStream/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/C3P0/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/Jsp/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/SpEL/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/Rasp/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/Python/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/Nodejs/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/Go/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/tags/Log4j2/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://y4tacker.github.io/tags/Weaver/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <loc>https://y4tacker.github.io/tags/Apache/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://y4tacker.github.io/tags/SmartBI/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <loc>https://y4tacker.github.io/tags/Struts2/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://y4tacker.github.io/tags/Golang/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <loc>https://y4tacker.github.io/tags/Apusic/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://y4tacker.github.io/tags/Gogs/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <loc>https://y4tacker.github.io/tags/CrushFTP/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://y4tacker.github.io/tags/%E6%B0%B8%E6%B4%AABI/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <loc>https://y4tacker.github.io/tags/IDEA/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://y4tacker.github.io/tags/%E5%A5%91%E7%BA%A6%E9%94%81/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <loc>https://y4tacker.github.io/tags/FernFlower/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://y4tacker.github.io/tags/U8Cloud/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <loc>https://y4tacker.github.io/tags/TemplatesImpl/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://y4tacker.github.io/tags/Xstream/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <loc>https://y4tacker.github.io/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/Smartbi/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/tags/Trick/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/tags/Gitlab/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/eoffice/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/tags/Jenkis/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://y4tacker.github.io/tags/H3C/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/ShowDoc/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/%E9%80%9A%E5%A4%A9%E6%98%9F/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/OA/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <loc>https://y4tacker.github.io/tags/Weaver/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/tags/Landray/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://y4tacker.github.io/tags/EMobile/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/%E4%BA%91%E6%A1%A5/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/%E5%B8%86%E8%BD%AF/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <loc>https://y4tacker.github.io/tags/eoffice/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/tags/%E9%97%B2%E8%81%8A/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/OA/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/ShowDoc/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/H3C/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/%E9%80%9A%E5%A4%A9%E6%98%9F/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/EMobile/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/%E4%BA%91%E6%A1%A5/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/tags/GeoServer/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/%E5%B8%86%E8%BD%AF/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/Xstream/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/tags/Thymeleaf/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/tags/Bamboocloud/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/JeecgBoot/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/tags/%E7%A6%85%E9%81%93/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/tags/Ecology/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/JeecgBoot/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/%E7%A6%85%E9%81%93/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/%E6%B0%B8%E6%B4%AABI/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/%E5%A5%91%E7%BA%A6%E9%94%81/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/Golang/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/Gogs/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/SmartBI/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/tags/U8Cloud/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -1535,78 +1544,78 @@
 
   
   <url>
-    <loc>https://y4tacker.github.io/categories/CTF/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <loc>https://y4tacker.github.io/categories/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/categories/Java/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://y4tacker.github.io/categories/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/categories/%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <loc>https://y4tacker.github.io/categories/CTF/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/categories/PHP/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/categories/php/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/categories/PTES/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://y4tacker.github.io/categories/Golang/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <loc>https://y4tacker.github.io/categories/%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/categories/Python/</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y4tacker.github.io/categories/Panalog/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://y4tacker.github.io/categories/%E9%97%B2%E8%81%8A/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/categories/Panalog/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://y4tacker.github.io/categories/Golang/</loc>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
