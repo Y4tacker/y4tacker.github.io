@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title>我用大模型十分钟完成ComfyUI未授权至命令执行(CVE-2025-67303)</title>
+      <title>如何用大模型十分钟完成ComfyUI未授权至命令执行利用分析(CVE-2025-67303)</title>
       <link href="/2026/01/06/year/2026/%E6%88%91%E7%94%A8%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%8D%81%E5%88%86%E9%92%9F%E5%AE%8C%E6%88%90ComfyUI%E6%9C%AA%E6%8E%88%E6%9D%83%E8%87%B3%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C-CVE-2025-67303/"/>
       <url>/2026/01/06/year/2026/%E6%88%91%E7%94%A8%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%8D%81%E5%88%86%E9%92%9F%E5%AE%8C%E6%88%90ComfyUI%E6%9C%AA%E6%8E%88%E6%9D%83%E8%87%B3%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C-CVE-2025-67303/</url>
       
@@ -2137,11 +2137,11 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> Java </tag>
             
             <tag> Log4j2 </tag>
+            
+            <tag> CTF </tag>
             
         </tags>
       
@@ -2403,9 +2403,9 @@
             
             <tag> Java </tag>
             
-            <tag> Jsp </tag>
-            
             <tag> Webshell </tag>
+            
+            <tag> Jsp </tag>
             
         </tags>
       
@@ -2511,9 +2511,9 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> Fastjson </tag>
+            
+            <tag> CTF </tag>
             
         </tags>
       
@@ -2945,9 +2945,9 @@
             
             <tag> Java </tag>
             
-            <tag> Tomcat </tag>
-            
             <tag> Jsp </tag>
+            
+            <tag> Tomcat </tag>
             
         </tags>
       
@@ -3011,11 +3011,11 @@
     
     
     <entry>
-      <title></title>
-      <link href="/google4e6948178b5b9b74.html"/>
-      <url>/google4e6948178b5b9b74.html</url>
+      <title>文章归档</title>
+      <link href="/archive.html"/>
+      <url>/archive.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>google-site-verification: google4e6948178b5b9b74.html]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
     </entry>
     
@@ -3033,11 +3033,33 @@
     
     
     <entry>
-      <title>文章归档</title>
-      <link href="/archive.html"/>
-      <url>/archive.html</url>
+      <title></title>
+      <link href="/google4e6948178b5b9b74.html"/>
+      <url>/google4e6948178b5b9b74.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>google-site-verification: google4e6948178b5b9b74.html]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>About me</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="👋Hi，I’am-Y4tacker"><a href="#👋Hi，I’am-Y4tacker" class="headerlink" title="👋Hi，I’am Y4tacker"></a>👋Hi，I’am Y4tacker</h3><blockquote><p>宁静致远，淡泊明志</p></blockquote><ul><li>🔭 CTFer: @0x401 Team(The third captain)/@R3kapig(Member)</li><li>⭐️ Github: <a href="https://github.com/Y4tacker">https://github.com/Y4tacker</a></li><li>🍔 Blog: <a href="http://y4tacker.github.io/">http://y4tacker.github.io/</a></li><li>😍 RSS：<a href="https://y4tacker.github.io/atom.xml">https://y4tacker.github.io/atom.xml</a></li><li>💡 Work: Alibaba Coud WAF</li><li>📱 Wechat: Y4tacker(欢迎各种正当技术交流，HC勿扰)</li></ul>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><ul><li><a href="https://skay.rce.la/">Skay</a>: Skay姐！</li><li><a href="https://4ra1n.github.io/">4ra1n</a>: 许少！！！</li><li><a href="https://websecuritys.cn/">远海</a> : 凡是过往,皆为序章.</li><li><a href="https://rayzz.cc/">rayzz</a>: just do it.</li><li><a href="https://ek1ng.com/">ek1ng</a>:  YESTERDAY YOU SAID TOMORROW.</li><li><a href="https://www.snakin.top/">Snakinya</a>: 苍山负雪，明烛天南.</li><li><a href="https://blog.zgsec.cn/">曾哥</a>: 弱小和无知不是生存的障碍，傲慢才是！</li><li><a href="https://miaotony.xyz/">MiaoTony</a>: 仰望星空，脚踏实地，未来可期.</li><li><a href="https://www.r3gr3t.com/">R3gr3t</a>: 战队Web师傅&amp;学弟.</li><li><a href="https://baozongwi.xyz/">baozongwi</a>: 天地不仁，以万物为刍狗.</li></ul><h1 id="Binary"><a href="#Binary" class="headerlink" title="Binary"></a>Binary</h1><ul><li><a href="https://minhal.me/">Minhal</a>: 战队逆向师傅&amp;学长</li><li><a href="https://crazymanarmy.github.io/">CrazyMan</a>: 空白！！！</li><li><a href="https://apeng.re/">apeng</a>: Reverse Everything</li><li><a href="https://xia0ji233.pro/">xia0ji233</a>: 老当益壮，宁移白首之心？穷且益坚，不坠青云之志.</li></ul>]]></content>
       
     </entry>
     
@@ -3047,6 +3069,17 @@
       <title>article</title>
       <link href="/article/index.html"/>
       <url>/article/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>search</title>
+      <link href="/search/index.html"/>
+      <url>/search/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
@@ -3069,39 +3102,6 @@
       <title>标签</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><ul><li><a href="https://skay.rce.la/">Skay</a>: Skay姐！</li><li><a href="https://4ra1n.github.io/">4ra1n</a>: 许少！！！</li><li><a href="https://websecuritys.cn/">远海</a> : 凡是过往,皆为序章.</li><li><a href="https://rayzz.cc/">rayzz</a>: just do it.</li><li><a href="https://ek1ng.com/">ek1ng</a>:  YESTERDAY YOU SAID TOMORROW.</li><li><a href="https://www.snakin.top/">Snakinya</a>: 苍山负雪，明烛天南.</li><li><a href="https://blog.zgsec.cn/">曾哥</a>: 弱小和无知不是生存的障碍，傲慢才是！</li><li><a href="https://miaotony.xyz/">MiaoTony</a>: 仰望星空，脚踏实地，未来可期.</li><li><a href="https://www.r3gr3t.com/">R3gr3t</a>: 战队Web师傅&amp;学弟.</li><li><a href="https://baozongwi.xyz/">baozongwi</a>: 天地不仁，以万物为刍狗.</li></ul><h1 id="Binary"><a href="#Binary" class="headerlink" title="Binary"></a>Binary</h1><ul><li><a href="https://minhal.me/">Minhal</a>: 战队逆向师傅&amp;学长</li><li><a href="https://crazymanarmy.github.io/">CrazyMan</a>: 空白！！！</li><li><a href="https://apeng.re/">apeng</a>: Reverse Everything</li><li><a href="https://xia0ji233.pro/">xia0ji233</a>: 老当益壮，宁移白首之心？穷且益坚，不坠青云之志.</li></ul>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>About me</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="👋Hi，I’am-Y4tacker"><a href="#👋Hi，I’am-Y4tacker" class="headerlink" title="👋Hi，I’am Y4tacker"></a>👋Hi，I’am Y4tacker</h3><blockquote><p>宁静致远，淡泊明志</p></blockquote><ul><li>🔭 CTFer: @0x401 Team(The third captain)/@R3kapig(Member)</li><li>⭐️ Github: <a href="https://github.com/Y4tacker">https://github.com/Y4tacker</a></li><li>🍔 Blog: <a href="http://y4tacker.github.io/">http://y4tacker.github.io/</a></li><li>😍 RSS：<a href="https://y4tacker.github.io/atom.xml">https://y4tacker.github.io/atom.xml</a></li><li>💡 Work: Alibaba Coud WAF</li><li>📱 Wechat: Y4tacker(欢迎各种正当技术交流，HC勿扰)</li></ul>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>search</title>
-      <link href="/search/index.html"/>
-      <url>/search/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
